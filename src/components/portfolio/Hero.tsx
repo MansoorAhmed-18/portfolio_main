@@ -109,7 +109,7 @@ export function Hero() {
             className="mt-8 flex flex-wrap gap-5 text-sm text-muted-foreground"
           >
             {[
-              { l: "GitHub", h: "https://github.com" },
+              { l: "GitHub", h: "https://github.com/MansoorAhmed-18" },
               { l: "LinkedIn", h: "https://www.linkedin.com/in/mansoor-nagoor-004972282" },
               { l: "Hugging Face", h: "https://huggingface.co" },
               { l: "Email", h: "mailto:mansoor184517@gmail.com" },

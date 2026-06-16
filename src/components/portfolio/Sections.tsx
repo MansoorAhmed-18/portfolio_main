@@ -253,7 +253,7 @@ export function Contact() {
             <a href="tel:+918838201232" className="px-6 py-3 rounded-full border-2 border-darker text-darker hover:bg-darker hover:text-cream transition-colors">
               +91-8838201232
             </a>
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-full border-2 border-darker text-darker hover:bg-darker hover:text-cream transition-colors">
+            <a href="https://github.com/MansoorAhmed-18" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-full border-2 border-darker text-darker hover:bg-darker hover:text-cream transition-colors">
               GitHub
             </a>
             <a href="https://www.linkedin.com/in/mansoor-nagoor-004972282" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-full border-2 border-darker text-darker hover:bg-darker hover:text-cream transition-colors">
