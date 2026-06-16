@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import resumeAsset from "@/assets/Mansoor_Resume.pdf.asset.json";
+
 
 const links = [
   { href: "#about", label: "About" },
@@ -46,7 +46,7 @@ export function Nav() {
         </div>
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <a
-            href={resumeAsset.url}
+            href="Mansoor_Resume.pdf"
             download="Mansoor_Resume.pdf"
             target="_blank"
             rel="noreferrer"
