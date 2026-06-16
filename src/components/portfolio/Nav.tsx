@@ -46,8 +46,8 @@ export function Nav() {
         </div>
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <a
-            href="latest_resume.pdf"
-            download="latest_resume.pdf"
+            href="/latest_resume.pdf"
+            download="/latest_resume.pdf"
             target="_blank"
             rel="noreferrer"
             aria-label="Download Resume"
