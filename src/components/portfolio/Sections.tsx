@@ -1,7 +1,15 @@
 import { motion } from "framer-motion";
 import { Reveal } from "./Reveal";
 
-function SectionHeader({ label, title, outline }: { label: string; title: string; outline?: string }) {
+function SectionHeader({
+  label,
+  title,
+  outline,
+}: {
+  label: string;
+  title: string;
+  outline?: string;
+}) {
   return (
     <Reveal>
       <p className="text-xs tracking-[0.3em] uppercase text-orange mb-2">{label}</p>
@@ -20,17 +28,27 @@ export function About() {
         <div className="grid md:grid-cols-2 gap-12">
           <Reveal delay={0.1}>
             <p className="text-cream/80 leading-relaxed mb-4">
-              I'm a B.Sc Computer Science student with skills in data analysis and a strong
-              interest in front-end development. I enjoy working with data, building user-friendly
-              web applications, and solving real-world problems through technology.
+              I'm a Computer Science student with practical exposure to Python, SQL, Power BI,
+              Excel, and data analysis. Experienced in building data dashboards, web applications,
+              working with modern databases, and exploring AI-related technologies.
             </p>
             <p className="text-cream/80 leading-relaxed mb-6">
-              I continuously explore new tools and technologies while building projects that
-              strengthen both my analytical and development skills.
+              A quick learner with strong problem-solving skills who is eager to contribute to data
+              analytics, business intelligence, or web development projects.
             </p>
             <div className="flex flex-wrap gap-2">
-              {["#DataDriven", "#ProblemSolver", "#AIEnthusiast", "#QuickLearner"].map((t) => (
-                <span key={t} className="px-3 py-1 rounded-full bg-dark border border-orange/20 text-cream text-sm">
+              {[
+                "#DataAnalytics",
+                "#PowerBI",
+                "#Python",
+                "#WebDevelopment",
+                "#ProblemSolver",
+                "#QuickLearner",
+              ].map((t) => (
+                <span
+                  key={t}
+                  className="px-3 py-1 rounded-full bg-dark border border-orange/20 text-cream text-sm"
+                >
                   {t}
                 </span>
               ))}
@@ -39,8 +57,11 @@ export function About() {
           <div className="grid gap-4">
             {[
               { h: "Location", p: "Chennai, India · Pallavaram" },
-              { h: "Contact", p: "mansoor184517@gmail.com\n+91-8838201232" },
-              { h: "Currently", p: "B.Sc. Computer Science, 2023–2026\nDG Vaishnav College, Chennai" },
+              { h: "Contact", p: "mansoor184517@gmail.com\n+91 88382 01232" },
+              {
+                h: "Currently",
+                p: "B.Sc. Computer Science (2023–2026)\nD.G. Vaishnav College, Chennai",
+              },
             ].map((c, i) => (
               <Reveal key={c.h} delay={0.15 + i * 0.1}>
                 <motion.div
@@ -60,11 +81,14 @@ export function About() {
 }
 
 const skillGroups = [
-  { h: "Languages", items: ["Python", "SQL", "MySQL", "JavaScript", "ASP.NET"] },
-  { h: "Web", items: ["HTML", "CSS"] },
-  { h: "Libraries", items: ["Pandas", "NumPy", "Matplotlib", "Streamlit"] },
-  { h: "Tools", items: ["Power BI", "MS Excel", "GitHub"] },
-  { h: "AI / APIs", items: ["Gemini AI", "OpenAI", "Hugging Face", "Gradio"] },
+  { h: "Programming", items: ["Python", "JavaScript"] },
+  { h: "Databases", items: ["MySQL", "Oracle"] },
+  {
+    h: "Data & Visualization",
+    items: ["Power BI", "Microsoft Excel", "Pandas", "NumPy", "Matplotlib"],
+  },
+  { h: "Web Development", items: ["HTML", "CSS"] },
+  { h: "Tools & Platforms", items: ["GitHub", "Vercel", "AWS"] },
 ];
 
 export function Skills() {
@@ -82,10 +106,15 @@ export function Skills() {
                 className="group relative glass rounded-2xl p-6 h-full transition-all hover:border-orange/60"
               >
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-orange/0 to-orange/0 group-hover:from-orange/10 group-hover:to-transparent transition-all" />
-                <h4 className="relative text-orange text-xs tracking-[0.2em] uppercase mb-4">{g.h}</h4>
+                <h4 className="relative text-orange text-xs tracking-[0.2em] uppercase mb-4">
+                  {g.h}
+                </h4>
                 <div className="relative flex flex-wrap gap-2">
                   {g.items.map((it) => (
-                    <span key={it} className="text-sm px-3 py-1 rounded-full bg-cream/5 text-cream border border-cream/10">
+                    <span
+                      key={it}
+                      className="text-sm px-3 py-1 rounded-full bg-cream/5 text-cream border border-cream/10"
+                    >
                       {it}
                     </span>
                   ))}
@@ -102,10 +131,10 @@ export function Skills() {
 export function Experience() {
   const items = [
     {
-      date: "Apr 2025",
-      title: "Data Science Intern",
-      company: "Commonwealth Bank (Online)",
-      body: "Performed data analysis and anonymization on sample banking datasets. Proposed data workflows and designed sample databases. Gained exposure to real-world data processing and analytics tasks.",
+      date: "2026",
+      title: "Freelance Web Developer",
+      company: "Client Projects (Chennai)",
+      body: "Built websites for two local business clients: a salon and a photography business. Worked directly with clients to understand requirements and update website content and layout based on feedback. Developed responsive pages using HTML, CSS, JavaScript, and React with GitHub and Vercel for version control and deployment. Handled live website setup, domain configuration, and practiced on-page SEO.",
     },
   ];
   return (
@@ -131,11 +160,37 @@ export function Experience() {
 }
 
 const projects = [
-  { n: "01", t: "AI SQL Query Generator", d: "Built an AI tool that converts natural language into SQL queries. Integrated Hugging Face & OpenAI APIs with Gemini AI.", tags: ["Gemini AI", "SQL", "Python"] },
-  { n: "02", t: "Password Masking Tool", d: "Secure password masking system using encryption/decryption keys, built with Python for robust data protection.", tags: ["Python", "Encryption", "Security"] },
-  { n: "03", t: "AI Calculator", d: "Natural-language calculator for AI-based arithmetic, deployed via Gradio.", tags: ["Gradio", "Python"] },
-  { n: "04", t: "Sales Performance Dashboard", d: "Designed the database in MySQL and loaded data into Power BI for rich visual analytics.", tags: ["MySQL", "Power BI", "SQL"] },
-  { n: "05", t: "Sportify", d: "An e-commerce website for sports gear with product browsing, cart, and checkout flows. Built with React on the front-end and Strapi as a headless CMS for content & APIs.", tags: ["React", "JavaScript", "Strapi"] },
+  {
+    n: "01",
+    t: "Restaurant Billing System & Power BI Analytics",
+    d: "Building a restaurant billing workflow with a frontend and Supabase-backed data storage for orders, items, quantities, prices, and payment records. Connected to an interactive Power BI dashboard analyzing sales performance, best-selling items, peak business hours, and sales trends.",
+    tags: ["Power BI", "Supabase", "SQL", "Data Analytics"],
+    liveUrl: "https://tanskitchen.vercel.app/",
+  },
+  {
+    n: "02",
+    t: "Harinee Photography — Studio Website",
+    d: "Production photography studio website built to showcase portfolio galleries, service packages, and client booking inquiries with clean responsive layout and optimized on-page SEO.",
+    tags: ["React", "JavaScript", "HTML/CSS", "SEO", "Vercel"],
+    liveUrl: "https://www.harineephotography.in/",
+  },
+  {
+    n: "03",
+    t: "Sales Performance Dashboard",
+    d: "Designed a relational database in MySQL and connected data pipelines into Power BI to create an executive dashboard for visualizing sales metrics, regional KPIs, and performance trends.",
+    tags: ["MySQL", "Power BI", "SQL", "Dashboards"],
+    liveUrl:
+      "https://app.fabric.microsoft.com/links/CDqI8oYZJB?ctid=11d5f58b-5d18-41e4-8cc7-d9398022dec0&pbi_source=linkShare&bookmarkGuid=f32c88e9-ba6c-4d2b-a686-4bd40604dfbb",
+  },
+  {
+    n: "04",
+    t: "Password Masking with Python",
+    d: "A Python script that securely connects to MySQL using an encrypted password (Fernet cryptography & custom masked strings) to demonstrate how to handle database connections safely and cleanly.",
+    tags: ["Python", "Cryptography", "MySQL", "Security"],
+    liveUrl: "https://github.com/MansoorAhmed-18/password_masking-using-python",
+    downloadUrl: "/password_masking_python.zip",
+    btnLabel: "Run / Code",
+  },
 ];
 
 export function Projects() {
@@ -149,18 +204,51 @@ export function Projects() {
             <Reveal key={p.n} delay={i * 0.08}>
               <motion.div
                 whileHover={{ y: -6 }}
-                className="group relative glass rounded-2xl p-7 h-full overflow-hidden"
+                className="group relative glass rounded-2xl p-7 h-full overflow-hidden flex flex-col justify-between"
               >
                 <div className="absolute top-0 left-0 h-1 w-0 group-hover:w-full bg-gradient-to-r from-orange to-orange/40 transition-all duration-500" />
-                <div className="font-display text-6xl font-black text-orange/15 leading-none mb-2">{p.n}</div>
-                <h3 className="font-display text-2xl text-cream mb-2">{p.t}</h3>
-                <p className="text-cream/70 leading-relaxed mb-4">{p.d}</p>
-                <div className="flex flex-wrap gap-2">
-                  {p.tags.map((t) => (
-                    <span key={t} className="text-xs px-2.5 py-1 rounded-full bg-orange/10 text-orange border border-orange/30">
-                      {t}
-                    </span>
-                  ))}
+                <div>
+                  <div className="flex items-start justify-between gap-4 mb-2">
+                    <div className="font-display text-6xl font-black text-orange/15 leading-none">
+                      {p.n}
+                    </div>
+                    <a
+                      href={p.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Open ${p.t}`}
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-orange text-darker hover:bg-cream hover:scale-105 active:scale-95 transition-all shadow-md shadow-orange/15 shrink-0"
+                    >
+                      <span>{p.btnLabel || "Run"}</span>
+                      <span className="text-[10px]" aria-hidden>
+                        ▶
+                      </span>
+                    </a>
+                  </div>
+                  <h3 className="font-display text-2xl text-cream mb-2">{p.t}</h3>
+                  <p className="text-cream/70 leading-relaxed mb-4">{p.d}</p>
+                </div>
+                <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-cream/10 mt-auto">
+                  <div className="flex flex-wrap gap-2">
+                    {p.tags.map((t) => (
+                      <span
+                        key={t}
+                        className="text-xs px-2.5 py-1 rounded-full bg-orange/10 text-orange border border-orange/30"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  {p.downloadUrl && (
+                    <a
+                      href={p.downloadUrl}
+                      download="password_masking_python.zip"
+                      aria-label={`Download ${p.t} zip`}
+                      className="inline-flex items-center gap-1 text-xs text-orange hover:text-cream font-medium transition-colors"
+                    >
+                      <span>Download .zip ↓</span>
+                    </a>
+                  )}
                 </div>
               </motion.div>
             </Reveal>
@@ -173,7 +261,11 @@ export function Projects() {
 
 export function Awards() {
   const cards = [
-    { i: "🏆", h: "International Conference Paper", p: "Presented on AI in Automation · DG Vaishnav College" },
+    {
+      i: "🏆",
+      h: "International Conference Paper",
+      p: "Presented on Artificial Intelligence in Automation · D.G. Vaishnav College",
+    },
     { i: "📊", h: "Microsoft Power BI for Beginners", p: "Certified by Simplilearn" },
     { i: "🛢", h: "Introduction to SQL", p: "Certified by Simplilearn" },
   ];
@@ -184,7 +276,10 @@ export function Awards() {
         <div className="grid md:grid-cols-3 gap-5">
           {cards.map((c, i) => (
             <Reveal key={c.h} delay={i * 0.08}>
-              <motion.div whileHover={{ y: -4 }} className="glass rounded-2xl p-6 border-l-4 border-l-orange h-full">
+              <motion.div
+                whileHover={{ y: -4 }}
+                className="glass rounded-2xl p-6 border-l-4 border-l-orange h-full"
+              >
                 <div className="text-3xl mb-3">{c.i}</div>
                 <h3 className="text-cream font-medium mb-1">{c.h}</h3>
                 <p className="text-muted-foreground text-sm">{c.p}</p>
@@ -199,9 +294,21 @@ export function Awards() {
 
 export function Education() {
   const items = [
-    { y: "2023 – 2026", t: "B.Sc. Computer Science", p: "DG Vaishnav College, Chennai" },
-    { y: "2023", t: "12th Standard", p: "Govt. ADW HR Sec School, Meenambakkam" },
-    { y: "2021", t: "10th Standard", p: "Cantonment Board High School, Pallavaram" },
+    {
+      y: "2023 – 2026",
+      t: "B.Sc. Computer Science",
+      p: "D.G. Vaishnav College, Chennai (Presented International Conference Paper on AI in Automation)",
+    },
+    {
+      y: "2023",
+      t: "Higher Secondary (12th)",
+      p: "Govt. ADW HR Sec School, Meenambakkam",
+    },
+    {
+      y: "2021",
+      t: "SSLC (10th)",
+      p: "Cantonment Board High School, Pallavaram",
+    },
   ];
   return (
     <section id="education" className="relative py-28 px-6 md:px-10">
@@ -230,13 +337,17 @@ export function Education() {
 
 export function Contact() {
   return (
-    <section id="contact" className="relative py-32 px-6 md:px-10 bg-orange text-darker overflow-hidden">
+    <section
+      id="contact"
+      className="relative py-32 px-6 md:px-10 bg-orange text-darker overflow-hidden"
+    >
       <div className="absolute inset-0 grid-bg opacity-20" />
       <div className="absolute -top-20 -left-20 w-80 h-80 bg-darker/20 rounded-full blur-3xl animate-blob" />
       <div className="relative max-w-4xl mx-auto text-center">
         <Reveal>
           <h2 className="font-display text-5xl md:text-7xl font-black leading-[0.95]">
-            Let's Work<br />
+            Let's Work
+            <br />
             <span className="text-outline-dark">Together!</span>
           </h2>
         </Reveal>
@@ -247,16 +358,32 @@ export function Contact() {
         </Reveal>
         <Reveal delay={0.2}>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
-            <a href="mailto:mansoor184517@gmail.com" className="px-6 py-3 rounded-full bg-darker text-cream hover:scale-105 transition-transform">
+            <a
+              href="mailto:mansoor184517@gmail.com"
+              className="px-6 py-3 rounded-full bg-darker text-cream hover:scale-105 transition-transform"
+            >
               mansoor184517@gmail.com
             </a>
-            <a href="tel:+918838201232" className="px-6 py-3 rounded-full border-2 border-darker text-darker hover:bg-darker hover:text-cream transition-colors">
+            <a
+              href="tel:+918838201232"
+              className="px-6 py-3 rounded-full border-2 border-darker text-darker hover:bg-darker hover:text-cream transition-colors"
+            >
               +91-8838201232
             </a>
-            <a href="https://github.com/MansoorAhmed-18" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-full border-2 border-darker text-darker hover:bg-darker hover:text-cream transition-colors">
+            <a
+              href="https://github.com/MansoorAhmed-18"
+              target="_blank"
+              rel="noreferrer"
+              className="px-6 py-3 rounded-full border-2 border-darker text-darker hover:bg-darker hover:text-cream transition-colors"
+            >
               GitHub
             </a>
-            <a href="https://www.linkedin.com/in/mansoor-nagoor-004972282" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-full border-2 border-darker text-darker hover:bg-darker hover:text-cream transition-colors">
+            <a
+              href="https://www.linkedin.com/in/mansoor-nagoor-004972282"
+              target="_blank"
+              rel="noreferrer"
+              className="px-6 py-3 rounded-full border-2 border-darker text-darker hover:bg-darker hover:text-cream transition-colors"
+            >
               LinkedIn
             </a>
             <a

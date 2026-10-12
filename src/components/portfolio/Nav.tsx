@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-
 const links = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
@@ -24,11 +23,16 @@ export function Nav() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled ? "py-3 bg-darker/80 backdrop-blur-xl border-b border-border" : "py-5 bg-transparent"
+        scrolled
+          ? "py-3 bg-darker/80 backdrop-blur-xl border-b border-border"
+          : "py-5 bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 flex items-center justify-between gap-3">
-        <a href="#home" className="flex items-center gap-2 font-display text-cream text-base sm:text-lg font-bold shrink-0">
+        <a
+          href="#home"
+          className="flex items-center gap-2 font-display text-cream text-base sm:text-lg font-bold shrink-0"
+        >
           <span className="text-orange text-xl animate-spin-slow inline-block">✦</span>
           Mansoor<span className="text-orange">.</span>
         </a>
@@ -47,7 +51,7 @@ export function Nav() {
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <a
             href="/latest_resume.pdf"
-            download="/latest_resume.pdf"
+            download="Mansoor_Ahmed_Resume.pdf"
             target="_blank"
             rel="noreferrer"
             aria-label="Download Resume"

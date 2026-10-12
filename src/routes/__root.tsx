@@ -77,18 +77,37 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "A dynamic portfolio application showcasing skills, projects, and contact information with animated design elements." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "A dynamic portfolio application showcasing skills, projects, and contact information with animated design elements." },
+      { title: "Mansoor Ahmed — Web Developer & Aspiring Data Analyst" },
+      {
+        name: "description",
+        content:
+          "Portfolio of Mansoor Ahmed N.G — Web Developer and aspiring Data Analyst from Chennai, India. Projects in Python, SQL, LangChain, Power BI.",
+      },
+      { name: "author", content: "Mansoor Ahmed N G" },
+      { property: "og:title", content: "Mansoor Ahmed — Portfolio" },
+      {
+        property: "og:description",
+        content:
+          "Portfolio of Mansoor Ahmed N.G — Web Developer and aspiring Data Analyst from Chennai, India.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "A dynamic portfolio application showcasing skills, projects, and contact information with animated design elements." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b46c95ae-7cc4-4fdc-a5c5-6c50a8ecb83b/id-preview-c0996fa9--bdfc0a57-0625-4f0c-8341-f1bd2b6a89d1.lovable.app-1780921149151.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b46c95ae-7cc4-4fdc-a5c5-6c50a8ecb83b/id-preview-c0996fa9--bdfc0a57-0625-4f0c-8341-f1bd2b6a89d1.lovable.app-1780921149151.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Mansoor Ahmed — Portfolio" },
+      {
+        name: "twitter:description",
+        content:
+          "Portfolio of Mansoor Ahmed N.G — Web Developer and aspiring Data Analyst from Chennai, India.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b46c95ae-7cc4-4fdc-a5c5-6c50a8ecb83b/id-preview-c0996fa9--bdfc0a57-0625-4f0c-8341-f1bd2b6a89d1.lovable.app-1780921149151.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b46c95ae-7cc4-4fdc-a5c5-6c50a8ecb83b/id-preview-c0996fa9--bdfc0a57-0625-4f0c-8341-f1bd2b6a89d1.lovable.app-1780921149151.png",
+      },
     ],
     links: [
       {

@@ -10,7 +10,11 @@ export function Reveal({
   children,
   delay = 0,
   className,
-}: { children: ReactNode; delay?: number; className?: string }) {
+}: {
+  children: ReactNode;
+  delay?: number;
+  className?: string;
+}) {
   return (
     <motion.div
       className={className}

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const roles = ["Frontend Developer", "Data Analyst", "AI Tinkerer", "Problem Solver"];
+const roles = ["Web Developer", "Data Analyst", "Power BI Developer", "Computer Science Grad"];
 
 function Typewriter() {
   const [i, setI] = useState(0);
@@ -38,13 +38,24 @@ function Typewriter() {
 
 export function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden"
+    >
       {/* animated background */}
       <div className="absolute inset-0 grid-bg animate-grid-pulse pointer-events-none" />
       <div className="absolute -top-32 -left-32 w-[480px] h-[480px] rounded-full bg-orange/20 blur-3xl animate-blob" />
-      <div className="absolute -bottom-32 -right-32 w-[520px] h-[520px] rounded-full bg-dark blur-3xl animate-blob" style={{ animationDelay: "-6s" }} />
+      <div
+        className="absolute -bottom-32 -right-32 w-[520px] h-[520px] rounded-full bg-dark blur-3xl animate-blob"
+        style={{ animationDelay: "-6s" }}
+      />
       <div className="absolute top-1/3 right-1/4 text-orange/40 text-2xl animate-float-slow">✦</div>
-      <div className="absolute bottom-1/4 left-10 text-orange/30 text-3xl animate-float-slow" style={{ animationDelay: "-4s" }}>✦</div>
+      <div
+        className="absolute bottom-1/4 left-10 text-orange/30 text-3xl animate-float-slow"
+        style={{ animationDelay: "-4s" }}
+      >
+        ✦
+      </div>
 
       <div className="relative max-w-7xl mx-auto w-full px-6 md:px-10 grid lg:grid-cols-2 gap-12 items-center">
         <div>
@@ -84,8 +95,9 @@ export function Hero() {
             transition={{ delay: 0.7 }}
             className="mt-6 max-w-md text-muted-foreground leading-relaxed"
           >
-            I love data and anything related to technology. I approach problems rationally
-            and seek the simplest, most functional solutions possible.
+            Computer Science student with practical exposure to Python, SQL, Power BI, Excel, and
+            data analysis. Experienced in building responsive web applications, client solutions,
+            and business intelligence dashboards.
           </motion.p>
 
           <motion.div
@@ -94,10 +106,16 @@ export function Hero() {
             transition={{ delay: 0.85 }}
             className="mt-8 flex flex-wrap gap-3"
           >
-            <a href="#contact" className="inline-flex items-center gap-2 bg-orange text-darker px-6 py-3 rounded-full font-medium hover:scale-105 transition-transform animate-glow-pulse">
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 bg-orange text-darker px-6 py-3 rounded-full font-medium hover:scale-105 transition-transform animate-glow-pulse"
+            >
               Hire Me <span>🚀</span>
             </a>
-            <a href="#projects" className="inline-flex items-center gap-2 glass text-cream px-6 py-3 rounded-full font-medium hover:border-orange/60 transition-colors">
+            <a
+              href="#projects"
+              className="inline-flex items-center gap-2 glass text-cream px-6 py-3 rounded-full font-medium hover:border-orange/60 transition-colors"
+            >
               ↓ View Work
             </a>
           </motion.div>
@@ -114,7 +132,13 @@ export function Hero() {
               { l: "Hugging Face", h: "https://huggingface.co" },
               { l: "Email", h: "mailto:mansoor184517@gmail.com" },
             ].map((s) => (
-              <a key={s.l} href={s.h} target="_blank" rel="noreferrer" className="hover:text-orange transition-colors">
+              <a
+                key={s.l}
+                href={s.h}
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-orange transition-colors"
+              >
                 {s.l} ↗
               </a>
             ))}
@@ -145,7 +169,7 @@ export function Hero() {
               <div className="absolute inset-0 grid-bg opacity-20" />
 
               <img
-                src="photo.jpg"
+                src="/photo.jpg"
                 alt="Mansoor Ahmed portrait"
                 className="absolute inset-0 w-full h-full object-cover object-top"
               />
@@ -155,15 +179,20 @@ export function Hero() {
 
               <div className="absolute bottom-4 left-4 right-4 font-display text-cream">
                 <div className="text-2xl font-bold">Mansoor Ahmed</div>
-                <div className="text-[10px] tracking-[0.25em] text-orange/90 mt-1">FRONTEND · DATA</div>
+                <div className="text-[10px] tracking-[0.25em] text-orange/90 mt-1">
+                  Web Dev · Data Analyst
+                </div>
               </div>
             </div>
             <div className="mt-6 text-center">
               <div className="font-display text-xl text-cream">Mansoor Ahmed</div>
-              <div className="text-sm text-muted-foreground">Frontend Developer · Data Analyst</div>
+              <div className="text-sm text-muted-foreground">Web Developer · Data Analyst</div>
               <div className="mt-4 flex flex-wrap gap-2 justify-center">
-                {["Python", "SQL", "Power BI"].map((t) => (
-                  <span key={t} className="text-xs px-3 py-1 rounded-full bg-orange/15 text-orange border border-orange/30">
+                {["Python", "SQL", "Power BI", "React", "Excel"].map((t) => (
+                  <span
+                    key={t}
+                    className="text-xs px-3 py-1 rounded-full bg-orange/15 text-orange border border-orange/30"
+                  >
                     {t}
                   </span>
                 ))}
@@ -172,7 +201,6 @@ export function Hero() {
           </div>
         </motion.div>
       </div>
-
     </section>
   );
 }

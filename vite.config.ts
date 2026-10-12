@@ -14,7 +14,5 @@ export default defineConfig({
   },
   // Build for Vercel when deploying there (set VERCEL=1 in Vercel env, which it is by default).
   // Locally and on Lovable this stays on the default Cloudflare target.
-  nitro: process.env.VERCEL
-    ? { preset: "vercel" }
-    : undefined,
+  nitro: process.env.VERCEL ? { preset: "vercel" } : undefined,
 });
